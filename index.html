@@ -2,17 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.1">
-    <title>Congratulations! 🎉 | QR Code Reward</title>
-    <meta name="description" content="Congratulations! Claim your reward by scanning the QR code.">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="theme-color" content="#10b981" media="(prefers-color-scheme: light)">
-    <meta property="og:title" content="Congratulations! 🎉 | Claim Your Reward">
-    <meta property="og:description" content="You've been selected! Scan the QR code to claim your exclusive reward.">
-    <meta property="og:image" content="https://i.postimg.cc/yNbL1Tvr/5900ed3c1d60b6f8e108a233d11cf94c3636ecef9687f571767ebf7b6e2b0b74-200.webp">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://modzy.site/congratulations">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations! | QR Code Reward</title>
+    <meta name="description" content="Congratulations! Scan QR code to claim reward.">
+    <meta name="theme-color" content="#10b981">
     
     <style>
         * {
@@ -28,7 +21,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             background: #f2f2f2;
             color: #010101;
-            font-size: 18px;
+            font-size: 16px;
         }
 
         .main-container {
@@ -43,7 +36,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            padding: 20px 0 0 0;
+            padding: 15px 0 0 0;
             width: 100vw;
             margin: 0;
             overflow: hidden;
@@ -55,62 +48,54 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            max-width: 900px;
-            padding: 40px 20px;
+            max-width: 600px;
+            padding: 20px;
             text-align: center;
-            margin-top: 40px;
+            margin-top: 20px;
             flex: 1;
         }
 
         .logo-container {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .logo {
-            width: 360px;
+            width: 280px;
             max-width: 90%;
             height: auto;
         }
 
         /* Celebration Header */
         .celebration-header {
-            margin-bottom: 40px;
+            margin-bottom: 25px;
         }
 
         .celebration-icon {
-            font-size: 72px;
-            margin-bottom: 20px;
+            font-size: 60px;
+            margin-bottom: 15px;
             animation: bounce 2s infinite;
         }
 
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+            50% { transform: translateY(-10px); }
         }
 
         .congratulations-title {
-            font-size: 42px;
+            font-size: 32px;
             font-weight: bold;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             background: linear-gradient(135deg, #FFD700, #FFA500);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-
-        .subtitle {
-            font-size: 22px;
-            font-weight: 600;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-            margin-bottom: 15px;
-            line-height: 1.4;
         }
 
         .instruction {
             font-size: 18px;
             color: rgba(255, 255, 255, 0.9);
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-            max-width: 600px;
+            max-width: 400px;
             margin: 0 auto;
         }
 
@@ -119,27 +104,27 @@
             background: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(10px);
             border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            padding: 40px;
-            margin: 30px 0;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
             width: 100%;
-            max-width: 500px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         .qr-title {
-            font-size: 28px;
+            font-size: 22px;
             font-weight: bold;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
         }
 
         .qr-code-placeholder {
-            width: 280px;
-            height: 280px;
+            width: 220px;
+            height: 220px;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            margin: 0 auto 25px;
+            border-radius: 12px;
+            margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -151,47 +136,47 @@
         .qr-code-placeholder::before {
             content: "YOUR QR CODE HERE";
             color: rgba(255, 255, 255, 0.6);
-            font-size: 16px;
+            font-size: 14px;
             text-align: center;
-            padding: 20px;
+            padding: 15px;
         }
 
         .qr-instruction {
-            font-size: 16px;
+            font-size: 14px;
             color: rgba(255, 255, 255, 0.9);
-            margin-top: 15px;
-            line-height: 1.5;
+            margin-top: 10px;
+            line-height: 1.4;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
         }
 
-        /* Email Section - Same as Clash Royale button style */
+        /* Email Section */
         .email-section {
-            margin: 40px 0;
+            margin: 25px 0;
             width: 100%;
-            max-width: 500px;
+            max-width: 400px;
         }
 
         .email-title {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
         }
 
         .email-form {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
         }
 
         .form-input {
             width: 100%;
-            padding: 18px 25px;
+            padding: 15px 20px;
             background: rgba(0, 0, 0, 0.5);
             border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 15px;
+            border-radius: 12px;
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             transition: all 0.3s ease;
             text-align: center;
         }
@@ -206,17 +191,17 @@
             color: rgba(255, 255, 255, 0.6);
         }
 
-        /* Submit Button - Same as Clash Royale button */
+        /* Submit Button */
         .submit-button {
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 0;
-            font-size: 24px;
+            font-size: 20px;
             position: relative;
             font-weight: bold;
             border: none;
-            height: 70px;
+            height: 60px;
             text-shadow: 0 -2px #000, 0 0 #000, 0 2px #000, 0 4px #000,
                        -1px -1px #000, 1px -1px #000, 1px 0 #000, -1px 0 #000,
                        1px 1px #000, -1px 1px #000, 1px 2px #000, -1px 2px #000;
@@ -224,7 +209,7 @@
             background-size: 100% 100%;
             color: white;
             text-decoration: none;
-            min-width: 280px;
+            min-width: 220px;
             margin: 0 auto;
             cursor: pointer;
             transition: transform 0.2s ease;
@@ -239,37 +224,38 @@
             content: "";
             position: absolute;
             top: 0;
-            height: 70px;
-            width: 14px;
+            height: 60px;
+            width: 12px;
             background-size: 100% 100%;
         }
 
         .submit-button:before {
-            left: -14px;
+            left: -12px;
             background-image: url('https://i.postimg.cc/dVhzdkJR/left.png');
         }
 
         .submit-button:after {
-            right: -14px;
+            right: -12px;
             background-image: url('https://i.postimg.cc/C5vQnYtc/right.png');
         }
 
         .submit-button span {
-            line-height: 30px;
-            padding: 0 25px;
+            line-height: 25px;
+            padding: 0 20px;
             display: block;
             transform: translateY(-2px);
         }
 
         /* Status Messages */
         .status-message {
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 20px;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
             font-weight: 500;
             display: none;
             text-align: center;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+            font-size: 14px;
         }
 
         .status-success {
@@ -286,7 +272,7 @@
 
         /* Decoration Section */
         .decoration-section {
-            margin: 10px 0 5px 0;
+            margin: 10px 0;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -295,8 +281,8 @@
         }
 
         .decoration-image {
-            width: 520px;
-            max-width: 95%;
+            width: 400px;
+            max-width: 90%;
             height: auto;
         }
 
@@ -304,109 +290,35 @@
         footer {
             background: #000;
             color: #fff;
-            padding: 30px 20px 20px;
+            padding: 20px 15px 15px;
             width: 100vw;
             position: relative;
             left: 50%;
             transform: translateX(-50%);
-            margin-top: -30px;
-            padding-top: 60px;
+            margin-top: -20px;
+            padding-top: 40px;
             box-sizing: border-box;
             z-index: 2;
         }
 
         .footer-bottom {
             border-top: 1px solid #333;
-            padding-top: 25px;
+            padding-top: 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         .copyright {
             color: #999;
-            font-size: 14px;
+            font-size: 12px;
             text-align: center;
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            html, body {
-                font-size: 16px;
-            }
-            
-            .main-container {
-                padding: 15px 0 0 0;
-            }
-            
-            .content-wrapper {
-                max-width: 700px;
-                margin-top: 30px;
-                padding: 30px 15px;
-            }
-            
-            .logo { 
-                width: 300px;
-            }
-            
-            .congratulations-title { 
-                font-size: 36px; 
-            }
-            
-            .subtitle { 
-                font-size: 20px; 
-            }
-            
-            .instruction {
-                font-size: 16px;
-            }
-            
-            .qr-section {
-                padding: 30px;
-            }
-            
-            .qr-title {
-                font-size: 24px;
-            }
-            
-            .qr-code-placeholder {
-                width: 240px;
-                height: 240px;
-            }
-            
-            .submit-button { 
-                min-width: 240px; 
-                font-size: 22px; 
-                height: 65px;
-            }
-            
-            .submit-button:before,
-            .submit-button:after { 
-                height: 65px;
-                width: 12px;
-            }
-            
-            .submit-button:before {
-                left: -12px;
-            }
-            
-            .submit-button:after {
-                right: -12px;
-            }
-            
-            .decoration-image { 
-                width: 450px;
-            }
-            
-            footer {
-                padding: 25px 15px 15px;
-                padding-top: 55px;
-            }
-        }
-
-        @media (max-width: 480px) {
             html, body {
                 font-size: 15px;
             }
@@ -416,53 +328,45 @@
             }
             
             .content-wrapper {
-                margin-top: 20px;
-                padding: 20px 15px;
+                max-width: 500px;
+                margin-top: 15px;
+                padding: 15px;
             }
             
             .logo { 
-                width: 260px;
+                width: 220px;
             }
             
             .congratulations-title { 
-                font-size: 32px; 
-            }
-            
-            .subtitle { 
-                font-size: 18px; 
+                font-size: 28px; 
             }
             
             .instruction {
-                font-size: 15px;
-            }
-            
-            .qr-section {
-                padding: 25px;
-            }
-            
-            .qr-title {
-                font-size: 22px;
-            }
-            
-            .qr-code-placeholder {
-                width: 220px;
-                height: 220px;
-            }
-            
-            .form-input {
-                padding: 15px;
                 font-size: 16px;
             }
             
+            .qr-section {
+                padding: 20px;
+            }
+            
+            .qr-title {
+                font-size: 20px;
+            }
+            
+            .qr-code-placeholder {
+                width: 180px;
+                height: 180px;
+            }
+            
             .submit-button { 
-                min-width: 220px; 
-                font-size: 20px; 
-                height: 60px;
+                min-width: 200px; 
+                font-size: 18px; 
+                height: 55px;
             }
             
             .submit-button:before,
             .submit-button:after { 
-                height: 60px;
+                height: 55px;
                 width: 10px;
             }
             
@@ -475,12 +379,86 @@
             }
             
             .decoration-image { 
-                width: 360px;
+                width: 320px;
             }
             
             footer {
-                padding: 20px 10px 15px;
-                padding-top: 50px;
+                padding: 15px 10px 10px;
+                padding-top: 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            html, body {
+                font-size: 14px;
+            }
+            
+            .main-container {
+                padding: 5px 0 0 0;
+            }
+            
+            .content-wrapper {
+                margin-top: 10px;
+                padding: 10px;
+            }
+            
+            .logo { 
+                width: 200px;
+            }
+            
+            .congratulations-title { 
+                font-size: 24px; 
+            }
+            
+            .instruction {
+                font-size: 14px;
+            }
+            
+            .qr-section {
+                padding: 15px;
+            }
+            
+            .qr-title {
+                font-size: 18px;
+            }
+            
+            .qr-code-placeholder {
+                width: 160px;
+                height: 160px;
+            }
+            
+            .form-input {
+                padding: 12px;
+                font-size: 14px;
+            }
+            
+            .submit-button { 
+                min-width: 180px; 
+                font-size: 16px; 
+                height: 50px;
+            }
+            
+            .submit-button:before,
+            .submit-button:after { 
+                height: 50px;
+                width: 8px;
+            }
+            
+            .submit-button:before {
+                left: -8px;
+            }
+            
+            .submit-button:after {
+                right: -8px;
+            }
+            
+            .decoration-image { 
+                width: 280px;
+            }
+            
+            footer {
+                padding: 10px 8px 8px;
+                padding-top: 30px;
             }
         }
     </style>
@@ -497,8 +475,7 @@
             <div class="celebration-header">
                 <div class="celebration-icon">🎉</div>
                 <h1 class="congratulations-title">CONGRATULATIONS!</h1>
-                <p class="subtitle">You've Been Selected For An Exclusive Reward</p>
-                <p class="instruction">Scan the QR code below to claim your special gift</p>
+                <p class="instruction">Scan the QR code to claim your reward</p>
             </div>
 
             <!-- QR Code Section -->
@@ -508,18 +485,18 @@
                     <!-- Replace with your actual QR code image -->
                     <!-- <img src="YOUR_QR_CODE_IMAGE_URL" alt="QR Code" style="width: 100%; height: 100%; object-fit: contain;"> -->
                 </div>
-                <p class="qr-instruction">Use your phone's camera to scan the QR code and receive your reward instantly.</p>
+                <p class="qr-instruction">Use your phone's camera to scan the QR code</p>
             </div>
 
             <!-- Email Subscription Section -->
             <div class="email-section">
-                <p class="email-title">Get Future Rewards</p>
+                <p class="email-title">Get Updates</p>
                 <form class="email-form" id="emailForm">
                     <input 
                         type="email" 
                         class="form-input" 
                         id="emailInput"
-                        placeholder="Enter your email for updates"
+                        placeholder="Enter your email"
                         required
                     >
                     <button type="submit" class="submit-button" id="submitButton">
@@ -528,11 +505,11 @@
                 </form>
 
                 <div id="successMessage" class="status-message status-success" style="display: none;">
-                    ✅ Thank you! Your email has been saved successfully.
+                    ✅ Email saved successfully!
                 </div>
                 
                 <div id="errorMessage" class="status-message status-error" style="display: none;">
-                    ❌ Please enter a valid email address.
+                    ❌ Please enter a valid email
                 </div>
             </div>
 
@@ -546,8 +523,7 @@
         <footer>
             <div class="footer-bottom">
                 <div class="copyright">
-                    © 2024 Supercell. Clash Royale is a trademark of Supercell.<br>
-                    This is an exclusive reward page for selected users only.
+                    © 2024 Supercell. Clash Royale is a trademark of Supercell.
                 </div>
             </div>
         </footer>
@@ -590,8 +566,7 @@
                 submitButton.disabled = true;
                 
                 try {
-                    // REPLACE THIS WITH YOUR GOOGLE APPS SCRIPT URL
-                    // After you deploy your Google Apps Script, put the URL here
+                    // Your Google Apps Script URL
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbzYPIIIK5zIN0qn6BX1jYqqD8aQbP7WvgSqpcSU1JHfYkVbGqKaCB2yt-aJ8Hvcf95c/exec';
                     
                     // Send the email to Google Sheets
@@ -600,15 +575,11 @@
                         headers: {
                             'Content-Type': 'application/json',
                         },
-                        mode: 'no-cors', // Important for Google Apps Script
                         body: JSON.stringify({ 
                             email: email,
                             timestamp: new Date().toISOString()
                         })
                     });
-                    
-                    // Note: With 'no-cors' mode, we can't read the response
-                    // But the data will still be sent to Google Sheets
                     
                     // Show success message
                     showMessage(successMessage, '✅ Email saved successfully!');
@@ -623,20 +594,7 @@
                     
                 } catch (error) {
                     console.error('Error:', error);
-                    showMessage(errorMessage, '⚠️ Saved locally. Please check your internet connection.');
-                    
-                    // Fallback: Save to localStorage if Google Sheets fails
-                    try {
-                        let savedEmails = JSON.parse(localStorage.getItem('qr_emails') || '[]');
-                        savedEmails.push({
-                            email: email,
-                            timestamp: new Date().toISOString()
-                        });
-                        localStorage.setItem('qr_emails', JSON.stringify(savedEmails));
-                        console.log('Email saved to localStorage:', email);
-                    } catch (localError) {
-                        console.error('Local storage error:', localError);
-                    }
+                    showMessage(errorMessage, '⚠️ Please try again later.');
                 } finally {
                     // Reset button
                     submitButton.innerHTML = originalText;
