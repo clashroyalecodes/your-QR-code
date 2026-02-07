@@ -570,16 +570,15 @@
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyiNMOfUEI9wMvHMat34sNz1k_jSK6UMuQpQOygDPvkvldz2FybvLdMkw1948PaqEKCww/exec';
                     
                     // Send the email to Google Sheets
-                    const response = await fetch(scriptUrl, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({ 
-                            email: email,
-                            timestamp: new Date().toISOString()
-                        })
-                    });
+                    const formData = new FormData();
+formData.append("email", email);
+formData.append("timestamp", new Date().toISOString());
+
+const response = await fetch(scriptUrl, {
+    method: 'POST',
+    body: formData
+});
+
                     
                     // Show success message
                     showMessage(successMessage, '✅ Email saved successfully!');
